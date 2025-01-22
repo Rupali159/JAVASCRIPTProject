@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif; 
+}
+
+body{
+    background: #f5f5f5;
+}
+
+/* navbar */
+nav{
+    background: #232f3e;
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    /* create space */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px;
+
+}
+
+.search-container input, button{
+    padding: 5px 10px;
+    border: none;
+    font-size: 16px;
+}
+
+
+.search-container input{
+    border-radius: 3px 0 0 3px;
+}
+
+.search-container button{
+    border-radius: 0 3px 3px 0;
+    background: #f5c518;
+    cursor: pointer;
+    /* time for the tansition chage color hover */
+    transition: all 0.2s;
+}
+
+.search-container button:hover{
+    background: #ffdd45;
+    
+}
+
+/* main movie section */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block: 38px;
+}
+
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 72vh;
+}
+
+.movie-container{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 0 10px #ccc;
+    width: 80%;
+    border-radius: 5px;
+}
+
+/* class in javascript */
+.movie-poster{
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 5px 0 0 5px;
+
+}
+
+.movie-info h2{
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+
+/* h2+P : + is denote the sibling of h2 */
+.movie-info h2+p{
+    text-align: center;
+}
+
+/* display flex:in one line */
+.movie-info .movie-genre{
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow-x: auto;
+
+}
+
+.movie-info .movie-genre p{
+    background: #232f3e;
+    color: #fff;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.movie-info p{
+    font-size: 18px;
+    margin-block: 16px;
+    line-height: 24px;
+
+}
+
+/* end in javasript */
+
+
+.movie-container.noBackground{
+    background: none;
+    box-shadow: none;
+    align-items: center;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    background: #232f3e;
+    color: white;
+    /* padding top and bottom */
+    padding-block: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+
+}
+
+
+/* responsive  Code*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .movie-container {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align content */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    .movie-poster img {
+        width: 100%; /* Ensure image spans full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between image and info */
+    }
+
+    .movie-info {
+        width: 100%; /* Make info match the image width */
+        padding: 20px; /* Add padding around text */
+        text-align: center; /* Center-align movie information */
+    }
+
+    .navbar {
+        justify-content: space-between; /* Adjust layout for tablets */
+        padding: 10px 20px; /* Add some spacing */
+    }
+
+    .footer {
+        text-align: center; /* Center-align footer text */
+        padding: 15px; /* Add padding for spacing */
+    }
+}
+
+
+
+/* //@media screen and (max-width:950px) { */
+@media screen and (max-width:768px) {   
+
+    .movie-container{
+        flex-direction: column;
+    }
+    
+    .movie-poster img{
+        width: 100%;
+        height: fit-content;
+        margin-right:0;
+        padding-left: 13%;
+        padding-top: 13%;
+    }
+
+    .movie-info{
+        /* left right padding*/
+        padding-inline: 30px;
+    }
+}
+
+
+
+@media screen and (max-width:630px) {
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-container{
+        margin-top: 12px;
+    }  
+}
+
+
+/* 385 not responsive */
